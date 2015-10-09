@@ -1,6 +1,7 @@
-import com.zendesk.app._
-import org.scalatra._
 import javax.servlet.ServletContext
+
+import org.fneves.app.Benchmarker
+import org.scalatra._
 
 class ScalatraBootstrap extends LifeCycle {
   override def init(context: ServletContext) {

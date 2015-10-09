@@ -1,4 +1,4 @@
-package com.zendesk.app
+package org.fneves.app
 
 import org.scalatra.test.specs2._
 

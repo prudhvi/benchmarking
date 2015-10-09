@@ -5,7 +5,7 @@ import sbt.Keys._
 import sbt._
 
 object BenchmarkBuild extends Build {
-  val Organization = "com.zendesk"
+  val Organization = "org.fneves"
   val Name = "benchmark"
   val Version = "0.1.0-SNAPSHOT"
   val ScalaVersion = "2.11.6"
@@ -29,7 +29,11 @@ object BenchmarkBuild extends Build {
         "org.eclipse.jetty" % "jetty-webapp" % "9.2.10.v20150310" % "container;compile",
         "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided",
         "org.scalatra" %% "scalatra-json" % ScalatraVersion,
-        "org.json4s"   %% "json4s-jackson" % "3.2.9"
+        "org.json4s"   %% "json4s-jackson" % "3.2.9",
+        "io.undertow" % "undertow-core" % "1.2.12.Final",
+        "io.undertow" % "undertow-servlet" % "1.2.12.Final",
+        "com.typesafe.akka" %% "akka-actor" % "2.3.4",
+        "net.databinder.dispatch" %% "dispatch-core" % "0.11.1"
       ),
       scalateTemplateConfig in Compile <<= (sourceDirectory in Compile){ base =>
         Seq(
