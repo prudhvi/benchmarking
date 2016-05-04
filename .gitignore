@@ -46,6 +46,10 @@ core/target
 pubsub/lib_managed
 pubsub/target
 
+# logs
+access.log
+service.log
+
 # eclipse specific
 .metadata
 jrebel.lic
