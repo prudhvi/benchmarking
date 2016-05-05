@@ -15,34 +15,11 @@ resolvers ++= Seq(
   Resolver.sonatypeRepo("releases"),
   "Twitter Maven" at "https://maven.twttr.com")
 
-lazy val versions = new {
-  val finagle = "6.29.0"
-  val finatra = "2.1.0"
-  val logback = "1.0.13"
-  val mockito = "1.9.5"
-  val scalatest = "2.2.3"
-  val specs2 = "2.3.12"
-}
+
 
 libraryDependencies ++= Seq(
-  "ch.qos.logback" % "logback-classic" % versions.logback,
-  "ch.qos.logback" % "logback-classic" % versions.logback % "test",
-  "org.json4s"   %% "json4s-jackson" % "3.2.9",
-
-  "com.twitter.finatra" %% "finatra-http" % versions.finatra,
-  "com.twitter.finatra" %% "finatra-slf4j" % versions.finatra,
-
-  "com.twitter.finatra" %% "finatra-http" % versions.finatra % "test",
-  "com.twitter.inject" %% "inject-server" % versions.finatra % "test",
-  "com.twitter.inject" %% "inject-app" % versions.finatra % "test",
-  "com.twitter.inject" %% "inject-core" % versions.finatra % "test",
-  "com.twitter.inject" %% "inject-modules" % versions.finatra % "test",
-  "com.twitter.finatra" %% "finatra-http" % versions.finatra % "test" classifier "tests",
-  "com.twitter.inject" %% "inject-server" % versions.finatra % "test" classifier "tests",
-  "com.twitter.inject" %% "inject-app" % versions.finatra % "test" classifier "tests",
-  "com.twitter.inject" %% "inject-core" % versions.finatra % "test" classifier "tests",
-  "com.twitter.inject" %% "inject-modules" % versions.finatra % "test" classifier "tests",
-
-  "org.mockito" % "mockito-core" % versions.mockito % "test",
-  "org.scalatest" %% "scalatest" % versions.scalatest % "test",
-  "org.specs2" %% "specs2" % versions.specs2 % "test")
+  "com.typesafe.akka" %% "akka-stream" % "2.4.4",
+  "com.typesafe.akka" %% "akka-http-core" % "2.4.4",
+  "com.typesafe.akka" %% "akka-http-experimental" % "2.4.4",
+  "com.typesafe.akka" %% "akka-http-spray-json-experimental" % "2.4.4"
+)
